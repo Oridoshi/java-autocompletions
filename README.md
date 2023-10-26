@@ -1,6 +1,6 @@
 # Java Autocomplétions
 
-![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)
+![Version](https://img.shields.io/badge/Version-1.0.1-brightgreen)
 ![License](https://img.shields.io/badge/License-Open%20Source-orange)
 
 ## Description
@@ -22,11 +22,11 @@ L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outi
 
 ## Utilisation
 
-L'extension "Java Autocomplétions" ajoute des snippets personnalisés pour Java. Vous pouvez les utiliser en tapant les préfixes de snippet dans votre code Java, puis en appuyant sur la touche `Tab` pour compléter le code.
+L'extension "JAVA Autocomplétions" ajoute des snippets personnalisés pour Java et importe les classes nécessaires à l'utilisation de ceux-ci. Vous pouvez les utiliser en tapant les préfixes de snippet dans votre code Java, puis en appuyant sur la touche `Tab` pour compléter le code.
 
 ### Exemples de Snippets
 
-- `lireFichier` : Génère une méthode pour lire un fichier et traiter les lignes.
+- `lirefichier` : Génère une méthode pour lire un fichier et traiter les lignes.
 
 ![GIF D'UTILISATION JAVA AUTOCOMPLÉTION](./data/img/utilisation1.gif)
 
