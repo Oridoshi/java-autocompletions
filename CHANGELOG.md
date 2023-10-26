@@ -1,9 +1,15 @@
-# Change Log
+# Journal des modifications (CHANGELOG)
 
-All notable changes to the "java-autocompletions" extension will be documented in this file.
+Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.0.1] - 26/10/2023
 
-## [Unreleased]
+- Mise à jour du snippet :
+  - `ecrirefichier` : Prends maintenant en paramètre le fichier de destination
 
-- Initial release
+## [1.0.0] - 26/10/2023
+
+- Ajout des snippets :
+  - `lirefichier`   : Génère une méthode pour lire un fichier et traiter les lignes.
+  - `ecrirefichier` : Génère une méthode pour écrire dans un fichier.
+  - `doubleboucle`  : Génère une double boucle java

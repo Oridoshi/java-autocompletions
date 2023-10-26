@@ -1,6 +1,6 @@
 {
 	"Génère une méthode pour lire un fichier": {
-		"prefix": "lireFichier",
+		"prefix": "lirefichier",
 		"body": [
 			"private void lireFichier(String nomFichier)",
 			"{",
@@ -34,7 +34,7 @@
 	},
 
 	"Génère une double boucle": {
-		"prefix": "doubleBoucle",
+		"prefix": "doubleboucle",
 		"body": [
 			"for (int lig = 0; lig < /*Nombre Ligne*/; lig++)",
 			"{",
@@ -48,13 +48,13 @@
 	},
 
 	"Génère une méthode pour écrire dans un fichier": {
-		"prefix": "ecrireFichier",
+		"prefix": "ecrirefichier",
 		"body": [
-			"private void ecrireFichier()",
+			"private void ecrireFichier(String nomFichierDestination)",
 			"{",
 			"    try",
 			"    {",
-			"        PrintWriter pw = new PrintWriter( new FileOutputStream(\"./mettre/le/chemin/à/votre/fichier/sorti/ici\") );",
+			"        PrintWriter pw = new PrintWriter( new FileOutputStream(nomFichierDestination) );",
 			"",
 			"        pw.println ( ecritureLigne() );",
 			"",
