@@ -1,0 +1,76 @@
+{
+	"Génère une méthode pour lire un fichier": {
+		"prefix": "lireFichier",
+		"body": [
+			"private void lireFichier(String nomFichier)",
+			"{",
+			"    String ligne = null;",
+			"",
+			"    try",
+			"    {",
+			"        InputStream ips = this.getClass().getResourceAsStream(nomFichier);",
+			"        InputStreamReader ipsr = new InputStreamReader(ips, \"UTF-8\");",
+			"        BufferedReader fichier = new BufferedReader(ipsr);",
+			"        // Traitement du fichier",
+			"        while ((ligne = fichier.readLine()) != null)",
+			"        {",
+			"            traiteLigne(ligne);// Modifiez cette méthode pour traiter la ligne lue",
+			"        }",
+			"        // Fin du traitement du fichier",
+			"        fichier.close();",
+			"    }",
+			"    catch(Exception exc)",
+			"    {",
+			"        System.out.println(\"Erreur de lecture du fichier \" + nomFichier + \" : \" + exc);",
+			"    }",
+			"}",
+			"",
+			"private void traiteLigne(String ligne)",
+			"{",
+			"    /*Mettre votre code de traitement de ligne*/",
+			"}"
+		],
+		"description": "Génère une Méthode pour lire un fichier et traiter les lignes"
+	},
+
+	"Génère une double boucle": {
+		"prefix": "doubleBoucle",
+		"body": [
+			"for (int lig = 0; lig < /*Nombre Ligne*/; lig++)",
+			"{",
+			"    for (int col = 0; col < /*Nombre Colonne*/; col++)",
+			"    {",
+			"        /*Mettre votre code*/",
+			"    }",
+			"}"
+		],
+		"description": "Génère une double boucle java"
+	},
+
+	"Génère une méthode pour écrire dans un fichier": {
+		"prefix": "ecrireFichier",
+		"body": [
+			"private void ecrireFichier()",
+			"{",
+			"    try",
+			"    {",
+			"        PrintWriter pw = new PrintWriter( new FileOutputStream(\"./mettre/le/chemin/à/votre/fichier/sorti/ici\") );",
+			"",
+			"        pw.println ( ecritureLigne() );",
+			"",
+			"        pw.close();",
+			"    }",
+			"    catch (Exception e)",
+			"    {",
+			"        e.printStackTrace();",
+			"    }",
+			"}",
+			"",
+			"private String ecritureLigne()",
+			"{",
+			"    /*Mettre votre code d'écriture de ligne*/",
+			"}"
+		],
+		"description": "Génère une Méthode pour écrire dans un fichier"
+	}
+}

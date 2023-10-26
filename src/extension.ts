@@ -1,26 +1,94 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+// Cette fonction ajoute une importation à un document
+function ajouterImport(document: vscode.TextDocument, importStatement: string) {
+    const text = document.getText();
+    const lines = text.split('\n');
+    const existingImports = new Set<string>();
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "java-autocompletions" is now active!');
+    // Parcourez le texte pour collecter les imports existants
+    for (const line of lines) {
+        if (line.trim().startsWith('import ')) {
+            existingImports.add(line.trim());
+        }
+    }
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('java-autocompletions.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Java Autocomplétions!');
-	});
+    // Vérifiez si l'importation est déjà présente
+    if (existingImports.has(importStatement)) {
+        return; // L'importation est déjà présente, pas besoin de l'ajouter à nouveau
+    }
 
-	context.subscriptions.push(disposable);
+    // Trouvez où ajouter les imports
+    const importsIndex = text.indexOf('import ');
+    if (importsIndex >= 0) {
+        // Il y a déjà des importations, nous ajoutons après le dernier import
+        for (let i = lines.length - 1; i >= 0; i--) {
+            if (lines[i].trim().startsWith('import ')) {
+                const lastImportLine = document.lineAt(i);
+                const position = new vscode.Position(lastImportLine.lineNumber + 1, 0);
+                const edit = new vscode.WorkspaceEdit();
+                edit.insert(document.uri, position, `${importStatement}\n`);
+                vscode.workspace.applyEdit(edit);
+                return;
+            }
+        }
+    }
+    else
+    {
+        // Il n'y a pas d'importations, nous ajoutons l'importation au début du fichier ou après le package
+        if(text.startsWith('package '))
+        {
+            const position = new vscode.Position(1, 0);
+            const edit = new vscode.WorkspaceEdit();
+            edit.insert(document.uri, position, `${importStatement}\n`);
+            vscode.workspace.applyEdit(edit);
+        }
+        else
+        {
+            const position = new vscode.Position(0, 0);
+            const edit = new vscode.WorkspaceEdit();
+            edit.insert(document.uri, position, `${importStatement}\n`);
+            vscode.workspace.applyEdit(edit);
+        }
+    }
 }
 
-// This method is called when your extension is deactivated
-export function deactivate() {}
+vscode.workspace.onDidChangeTextDocument((event) => {
+    const editor = vscode.window.activeTextEditor;
+    if (editor) {
+        const document = editor.document;
+        if (event.contentChanges.length > 0 ) {
+            const text = event.contentChanges[0].text;
+            
+            // Vérifiez si le texte inséré correspond à un snippet
+            if (text.includes('InputStream')){
+                // Insérer les imports nécessaires
+                ajouterImport(document, 'import java.io.InputStream;');
+            }
+            if (text.includes('InputStreamReader')){
+                // Insérer les imports nécessaires
+                ajouterImport(document, 'import java.io.InputStreamReader;');
+            }
+            if (text.includes('BufferedReader')){
+                // Insérer les imports nécessaires
+                ajouterImport(document, 'import java.io.BufferedReader;');
+            }
+            if(text.includes('PrintWriter')){
+                // Insérer les imports nécessaires
+                ajouterImport(document, 'import java.io.PrintWriter;');
+            }
+            if(text.includes('FileOutputStream')){
+                // Insérer les imports nécessaires
+                ajouterImport(document, 'import java.io.FileOutputStream;');
+            }
+        }
+    }
+});
+
+export function activate(context: vscode.ExtensionContext) {
+    // ...
+}
+
+export function deactivate() {
+    // ...
+}

@@ -1,71 +1,54 @@
-# java-autocompletions README
+# Java Autocomplétions
 
-This is the README for your extension "java-autocompletions". After writing up a brief description, we recommend including the following sections.
+![Version](https://img.shields.io/badge/Version-0.0.1-brightgreen)
+![VSCode](https://img.shields.io/badge/VSCode-^1.83.0-blue)
+![License](https://img.shields.io/badge/License-Open%20Source-orange)
 
-## Features
+## Description
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outil pratique pour les développeurs Java. Elle propose une collection de snippets personnalisés pour simplifier la rédaction de code Java. Cette extension facilite la création de méthodes courantes et de modèles de code, améliorant ainsi votre productivité en développement Java.
 
-For example if there is an image subfolder under your extension project workspace:
+## Fonctionnalités
 
-\!\[feature X\]\(images/feature-x.png\)
+- Snippets Java personnalisés pour les opérations courantes.
+- Générez rapidement du code Java structuré.
+- Optimisez votre flux de travail de développement Java.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+1. Ouvrez Visual Studio Code.
+2. Allez dans l'onglet "Extensions" (ou utilisez le raccourci `Ctrl+Shift+X`).
+3. Recherchez "Java Autocomplétions" et cliquez sur "Installer".
+4. Redémarrez VSCode si nécessaire.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Utilisation
 
-## Extension Settings
+L'extension "Java Autocomplétions" ajoute des snippets personnalisés pour Java. Vous pouvez les utiliser en tapant les préfixes de snippet dans votre code Java, puis en appuyant sur la touche `Tab` pour compléter le code.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Exemples de Snippets
 
-For example:
+- `lireFichier` : Génère une méthode pour lire un fichier et traiter les lignes.
 
-This extension contributes the following settings:
+![GIF D'UTILISATION JAVA AUTOCOMPLÉTION](./data/img/utilisation1.gif)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Contributions
 
-## Known Issues
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer à l'amélioration de cette extension, n'hésitez pas à créer une demande de pull sur GitHub.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Licence
 
-## Release Notes
+Ce projet est open source sous licence. Voir le fichier [LICENSE](LICENSE.md) pour plus de détails.
 
-Users appreciate release notes as you update your extension.
+## Contact
 
-### 1.0.0
+Pour toute question ou commentaire concernant cette extension, veuillez contacter l'auteur, TomDunet, à l'adresse email suivante : **tomdunet.contact@gmail.com**
 
-Initial release of ...
+## Suggestions et Évaluation
 
-### 1.0.1
+Si vous avez des suggestions, veuillez ne pas donner une mauvaise évaluation à l'extension. Au lieu de cela, [ouvrez une demande](https://github.com/Oridoshi/psql-autocompletions/issues) sur la page du projet Github, et j'essaierai de l'ajouter lorsque cela sera possible.
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Si vous appréciez l'extension, veuillez lui attribuer une note de 5⭐. Et, si vous vous sentez particulièrement gentil aujourd'hui, laissez également un commentaire aimable : [Évaluez cette extension](https://marketplace.visualstudio.com/items?itemName=TomDunet.psql-autocompletions&ssr=false#review-details).
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Développé par [Dunet Tom](https://github.com/Oridoshi)
