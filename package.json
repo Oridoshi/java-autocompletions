@@ -1,9 +1,9 @@
 {
   "name": "java-autocompletions",
   "publisher": "TomDunet",
-  "displayName": "Java Autocomplétions",
+  "displayName": "JAVA Autocomplétions",
   "description": "Extention java qui contient des snippets Perso",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.83.0"
   },

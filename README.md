@@ -1,7 +1,6 @@
 # Java Autocomplétions
 
-![Version](https://img.shields.io/badge/Version-0.0.1-brightgreen)
-![VSCode](https://img.shields.io/badge/VSCode-^1.83.0-blue)
+![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)
 ![License](https://img.shields.io/badge/License-Open%20Source-orange)
 
 ## Description
