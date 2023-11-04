@@ -1,7 +1,9 @@
 {
-	"Génère une méthode pour lire un fichier": {
+	"Génère une méthode pour lire un fichier":
+	{
 		"prefix": "lirefichierBufferedReader",
-		"body": [
+		"body":
+		[
 			"private void lireFichier(String nomFichier)",
 			"{",
 			"    String ligne = null;",
@@ -33,14 +35,16 @@
 		"description": "Génère une Méthode pour lire un fichier et traiter les lignes"
 	},
 
-	"Génère une méthode pour lire un fichier avec un Scanner": {
+	"Génère une méthode pour lire un fichier avec un Scanner":
+	{
 		"prefix": "lirefichierScanner",
-		"body": [
+		"body":
+		[
 			"private void lireFichierAvecScanner(String nomFichier)",
 			"{",
 			"    try",
 			"    {",
-			"        Scanner scanner = new Scanner(new File(nomFichier));",
+			"        Scanner scanner = new FileInputStream(nomFichier), \"UTF-8\");",
 			"        while (scanner.hasNextLine())",
 			"        {",
 			"            \/*CODE DU TRAITEMENT DE LA LIGNE*/",
@@ -57,9 +61,11 @@
 		"description": "Génère une Méthode pour lire un fichier avec un Scanner et traiter les lignes"
 	},
 
-	"Génère une double boucle": {
+	"Génère une double boucle":
+	{
 		"prefix": "doubleboucle",
-		"body": [
+		"body":
+		[
 			"for (int lig = 0; lig < /*Nombre Ligne*/; lig++)",
 			"{",
 			"    for (int col = 0; col < /*Nombre Colonne*/; col++)",
@@ -71,9 +77,11 @@
 		"description": "Génère une double boucle java"
 	},
 
-	"Génère une méthode pour écrire dans un fichier": {
+	"Génère une méthode pour écrire dans un fichier":
+	{
 		"prefix": "ecrirefichier",
-		"body": [
+		"body":
+		[
 			"private void ecrireFichier(String nomFichierDestination)",
 			"{",
 			"    try",

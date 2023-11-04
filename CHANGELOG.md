@@ -1,6 +1,11 @@
+import java.io.Scanner;
 # Journal des modifications (CHANGELOG)
 
 Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
+
+## [1.0.3] - 04/11/2023
+
+- Correction de bug dans les imports et le `lireFichierScanner`.
 
 ## [1.0.2] - 04/11/2023
 

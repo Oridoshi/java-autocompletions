@@ -88,7 +88,7 @@ vscode.workspace.onDidChangeTextDocument((event) => {
             }
             if(text.includes('Scanner'))
             {
-                ajouterImport(document, 'import java.io.Scanner;');
+                ajouterImport(document, 'import java.util.Scanner;');
             }
         }
     }
