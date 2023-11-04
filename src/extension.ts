@@ -53,42 +53,48 @@ function ajouterImport(document: vscode.TextDocument, importStatement: string) {
     }
 }
 
-vscode.workspace.onDidChangeTextDocument((event) => {
+vscode.workspace.onDidChangeTextDocument((event) =>
+{
     const editor = vscode.window.activeTextEditor;
-    if (editor) {
+    if (editor)
+    {
         const document = editor.document;
-        if (event.contentChanges.length > 0 ) {
-            const text = event.contentChanges[0].text;
-            
-            // Vérifiez si le texte inséré correspond à un snippet
-            if (text.includes('InputStream'))
+        if (document.languageId === 'java')
+        {
+            if (event.contentChanges.length > 0 )
             {
-                // Insérer les imports nécessaires
-                ajouterImport(document, 'import java.io.InputStream;');
-            }
-            if (text.includes('InputStreamReader'))
-            {
-                // Insérer les imports nécessaires
-                ajouterImport(document, 'import java.io.InputStreamReader;');
-            }
-            if (text.includes('BufferedReader'))
-            {
-                // Insérer les imports nécessaires
-                ajouterImport(document, 'import java.io.BufferedReader;');
-            }
-            if(text.includes('PrintWriter'))
-            {
-                // Insérer les imports nécessaires
-                ajouterImport(document, 'import java.io.PrintWriter;');
-            }
-            if(text.includes('FileOutputStream'))
-            {
-                // Insérer les imports nécessaires
-                ajouterImport(document, 'import java.io.FileOutputStream;');
-            }
-            if(text.includes('Scanner'))
-            {
-                ajouterImport(document, 'import java.util.Scanner;');
+                const text = event.contentChanges[0].text;
+                
+                // Vérifiez si le texte inséré correspond à un snippet
+                if (text.includes('InputStream'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.InputStream;');
+                }
+                if (text.includes('InputStreamReader'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.InputStreamReader;');
+                }
+                if (text.includes('BufferedReader'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.BufferedReader;');
+                }
+                if(text.includes('PrintWriter'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.PrintWriter;');
+                }
+                if(text.includes('FileOutputStream'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.FileOutputStream;');
+                }
+                if(text.includes('Scanner'))
+                {
+                    ajouterImport(document, 'import java.util.Scanner;');
+                }
             }
         }
     }
