@@ -34,7 +34,7 @@
 	},
 
 	"Génère une méthode pour lire un fichier avec un Scanner": {
-		"prefix": "lireFichierScanner",
+		"prefix": "lirefichierScanner",
 		"body": [
 			"private void lireFichierAvecScanner(String nomFichier)",
 			"{",

@@ -5,7 +5,7 @@ Toutes les modifications importantes de l'extension "Java Autocomplétions" sero
 ## [1.0.2] - 04/11/2023
 
 - Mise à jour snippets : 
-  - `lirefichier` : Maintenant diviser en 2 snippets, un qui utilise un BufferedReader et l'autre un Scanner, respectivement appeler par 
+  - `lirefichier` : Maintenant, divisez en 2 snippets, un qui utilise un BufferedReader et l'autre un Scanner, respectivement appelés par `lirefichierBufferedReader` et `lirefichierScanner`
 
 ## [1.0.1] - 26/10/2023
 
