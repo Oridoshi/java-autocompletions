@@ -1,6 +1,6 @@
 {
 	"Génère une méthode pour lire un fichier": {
-		"prefix": "lirefichier",
+		"prefix": "lirefichierBufferedReader",
 		"body": [
 			"private void lireFichier(String nomFichier)",
 			"{",
@@ -31,6 +31,30 @@
 			"}"
 		],
 		"description": "Génère une Méthode pour lire un fichier et traiter les lignes"
+	},
+
+	"Génère une méthode pour lire un fichier avec un Scanner": {
+		"prefix": "lireFichierScanner",
+		"body": [
+			"private void lireFichierAvecScanner(String nomFichier)",
+			"{",
+			"    try",
+			"    {",
+			"        Scanner scanner = new Scanner(new File(nomFichier));",
+			"        while (scanner.hasNextLine())",
+			"        {",
+			"            \/*CODE DU TRAITEMENT DE LA LIGNE*/",
+			"            System.out.println(\"scanner.nextLine() : \" + scanner.nextLine());",
+			"        }",
+			"        scanner.close();",
+			"    }",
+			"    catch (Exception e)",
+			"    {",
+			"        System.err.println(\"Erreur de lecture du fichier \" + nomFichier + \" : \" + e.getMessage());",
+			"    }",
+			"}"
+		],
+		"description": "Génère une Méthode pour lire un fichier avec un Scanner et traiter les lignes"
 	},
 
 	"Génère une double boucle": {

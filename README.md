@@ -1,11 +1,12 @@
 # Java Autocomplétions
 
-![Version](https://img.shields.io/badge/Version-1.0.1-brightgreen)
+![Version](https://img.shields.io/badge/Version-1.0.2-brightgreen)
 ![License](https://img.shields.io/badge/License-Open%20Source-orange)
+![Indentation](https://img.shields.io/badge/Indentation-Allman-lightgray)
 
 ## Description
 
-L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outil pratique pour les développeurs Java. Elle propose une collection de snippets personnalisés pour simplifier la rédaction de code Java. Cette extension facilite la création de méthodes courantes et de modèles de code, améliorant ainsi votre productivité en développement Java.
+L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outil pratique pour les développeurs Java. Elle propose une collection de snippets personnalisés pour simplifier la rédaction de code Java, en suivant le style d'indentation Allman. Cette extension facilite la création de méthodes courantes et de modèles de code, améliorant ainsi votre productivité en développement Java.
 
 ## Fonctionnalités
 
@@ -44,9 +45,9 @@ Pour toute question ou commentaire concernant cette extension, veuillez contacte
 
 ## Suggestions et Évaluation
 
-Si vous avez des suggestions, veuillez ne pas donner une mauvaise évaluation à l'extension. Au lieu de cela, [ouvrez une demande](https://github.com/Oridoshi/psql-autocompletions/issues) sur la page du projet Github, et j'essaierai de l'ajouter lorsque cela sera possible.
+Si vous avez des suggestions, veuillez ne pas donner une mauvaise évaluation à l'extension. Au lieu de cela, [ouvrez une demande](https://github.com/Oridoshi/java-autocompletions/issues) sur la page du projet Github, et j'essaierai de l'ajouter lorsque cela sera possible.
 
-Si vous appréciez l'extension, veuillez lui attribuer une note de 5⭐. Et, si vous vous sentez particulièrement gentil aujourd'hui, laissez également un commentaire aimable : [Évaluez cette extension](https://marketplace.visualstudio.com/items?itemName=TomDunet.psql-autocompletions&ssr=false#review-details).
+Si vous appréciez l'extension, veuillez lui attribuer une note de 5⭐. Et, si vous vous sentez particulièrement gentil aujourd'hui, laissez également un commentaire aimable : [Évaluez cette extension](https://marketplace.visualstudio.com/items?itemName=TomDunet.java-autocompletions&ssr=false#review-details).
 
 ---
 

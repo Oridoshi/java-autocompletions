@@ -61,25 +61,34 @@ vscode.workspace.onDidChangeTextDocument((event) => {
             const text = event.contentChanges[0].text;
             
             // Vérifiez si le texte inséré correspond à un snippet
-            if (text.includes('InputStream')){
+            if (text.includes('InputStream'))
+            {
                 // Insérer les imports nécessaires
                 ajouterImport(document, 'import java.io.InputStream;');
             }
-            if (text.includes('InputStreamReader')){
+            if (text.includes('InputStreamReader'))
+            {
                 // Insérer les imports nécessaires
                 ajouterImport(document, 'import java.io.InputStreamReader;');
             }
-            if (text.includes('BufferedReader')){
+            if (text.includes('BufferedReader'))
+            {
                 // Insérer les imports nécessaires
                 ajouterImport(document, 'import java.io.BufferedReader;');
             }
-            if(text.includes('PrintWriter')){
+            if(text.includes('PrintWriter'))
+            {
                 // Insérer les imports nécessaires
                 ajouterImport(document, 'import java.io.PrintWriter;');
             }
-            if(text.includes('FileOutputStream')){
+            if(text.includes('FileOutputStream'))
+            {
                 // Insérer les imports nécessaires
                 ajouterImport(document, 'import java.io.FileOutputStream;');
+            }
+            if(text.includes('Scanner'))
+            {
+                ajouterImport(document, 'import java.io.Scanner;');
             }
         }
     }
