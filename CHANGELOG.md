@@ -2,7 +2,7 @@
 
 Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
 
-## [1.0.4] - 04/11/2023
+## [1.0.4 - 1.0.5] - 04/11/2023
 
 - Ajout de la Javadoc pour les différentes méthodes.
 - Correction

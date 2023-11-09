@@ -1,5 +1,5 @@
 {
-	"Génère une méthode pour lire un fichier":
+	"Génère une méthode pour lire un fichier avec un BufferedReader":
 	{
 		"prefix": "lirefichierBufferedReader",
 		"body":
@@ -60,7 +60,8 @@
 			"{",
 			"    try",
 			"    {",
-			"        Scanner scanner =new Scanner(new FileInputStream(nomFichier), \"UTF-8\");",
+			"        InputStream ips = this.getClass().getResourceAsStream(nomFichier);",
+			"        Scanner scanner =new Scanner(ips, \"UTF-8\");",
 			"        while (scanner.hasNextLine())",
 			"        {",
 			"            \/*CODE DU TRAITEMENT DE LA LIGNE*/",

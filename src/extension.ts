@@ -71,6 +71,11 @@ vscode.workspace.onDidChangeTextDocument((event) =>
                     // Insérer les imports nécessaires
                     ajouterImport(document, 'import java.io.InputStream;');
                 }
+                if (text.includes('FileInputStream'))
+                {
+                    // Insérer les imports nécessaires
+                    ajouterImport(document, 'import java.io.FileInputStream;');
+                }
                 if (text.includes('InputStreamReader'))
                 {
                     // Insérer les imports nécessaires
@@ -85,11 +90,6 @@ vscode.workspace.onDidChangeTextDocument((event) =>
                 {
                     // Insérer les imports nécessaires
                     ajouterImport(document, 'import java.io.PrintWriter;');
-                }
-                if(text.includes('FileOutputStream'))
-                {
-                    // Insérer les imports nécessaires
-                    ajouterImport(document, 'import java.io.FileOutputStream;');
                 }
                 if(text.includes('Scanner'))
                 {
