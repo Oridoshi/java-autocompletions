@@ -2,9 +2,11 @@
 
 Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
 
-## [1.0.6] - 20/11/2023
-- Mise a jour de la JavaDoc pour les deux méthode `lireFichier`
-- Ajout du snippet `iterintern`
+## [1.0.6 - 1.0.7] - 20/11/2023
+- Mise a jour de la JavaDoc pour les deux méthode `lireFichier` et de l'importation des importe automatique
+- Ajout des snippets:
+ - `iterintern`
+ - `comparintern`
 
 ## [1.0.4 - 1.0.5] - 04/11/2023
 

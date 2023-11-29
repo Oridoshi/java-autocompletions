@@ -1,6 +1,6 @@
 # Java Autocomplétions
 
-![Version](https://img.shields.io/badge/Version-1.0.6-brightgreen)
+![Version](https://img.shields.io/badge/Version-1.0.7-brightgreen)
 ![License](https://img.shields.io/badge/License-Open%20Source-orange)
 ![Indentation](https://img.shields.io/badge/Indentation-Allman-lightgray)
 

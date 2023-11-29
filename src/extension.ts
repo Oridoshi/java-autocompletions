@@ -95,6 +95,14 @@ vscode.workspace.onDidChangeTextDocument((event) =>
                 {
                     ajouterImport(document, 'import java.util.Scanner;');
                 }
+                if(text.includes('Iterator'))
+                {
+                    ajouterImport(document, 'import java.util.Iterator;');
+                }
+                if(text.includes('Comparator'))
+                {
+                    ajouterImport(document, 'import java.util.Comparator;');
+                }
             }
         }
     }

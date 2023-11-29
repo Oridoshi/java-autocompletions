@@ -80,20 +80,18 @@
 		"description": "Génère une Méthode pour lire un fichier avec un Scanner et traiter les lignes"
 	},
 
-	"Génère une class interne pour créer un iterator si il y en a déjà un par défault":
+	"Génère une class interne pour créer un iterator":
 	{
 		"prefix": "iterintern",
 		"body":
 		[
-			"public class /*NomIterator*/ implements Iterator</*TYPE*/>",
+			"public class NomIterator implements Iterator<TYPE>",
 			"{",
-			"    private int index;",
+			"    private int index = 0;",
 			"    /*variable si besoin*/",
 			"",
-			"    public /*NomIterator*/()",
+			"    public NomIterator()",
 			"    {",
-			"        super();",
-			"        this.index = 0;",
 			"        /*initialisation des variable si besoin*/",
 			"    }",
 			"",
@@ -104,13 +102,31 @@
 			"    }",
 			"",
 			"    @Override",
-			"    public /*TYPE*/ next()",
+			"    public TYPE next()",
 			"    {",
 			"        return ArrayQuiContientLesValeur[this.index++];/*Si le tableau est dans la classe parent ont fait NomDeLaClassParent.this.ArrayQuiContientLesValeur*/",
 			"    }",
 			"}"
 		],
 		"description": "Génère une class interne pour créer un iterator si il y en a déjà un par défault"
+	},
+
+	"Génère une class interne pour créer un comparator si il y en a déjà un par défault":
+	{
+		"prefix": "comparintern",
+		"body":
+		[
+			"public static class NomComparator implements Comparator<TYPE>",
+			"{",
+			"    @Override",
+			"    public int compare(TYPE o1, TYPE o2)",
+			"    {",
+			"        /*CODE DE COMPARAISON*/",
+			"    }",
+			"}"
+		],
+		"description": "Génère une class interne pour créer un comparator si il y en a déjà un par défault"
+	
 	},
 
 	"Génère une méthode pour écrire dans un fichier":
