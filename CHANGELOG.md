@@ -2,6 +2,10 @@
 
 Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
 
+## [1.0.6] - 20/11/2023
+- Mise a jour de la JavaDoc pour les deux méthode `lireFichier`
+- Ajout du snippet `iterintern`
+
 ## [1.0.4 - 1.0.5] - 04/11/2023
 
 - Ajout de la Javadoc pour les différentes méthodes.
@@ -28,4 +32,3 @@ Toutes les modifications importantes de l'extension "Java Autocomplétions" sero
 - Ajout des snippets :
   - `lirefichier`   : Génère une méthode pour lire un fichier et traiter les lignes.
   - `ecrirefichier` : Génère une méthode pour écrire dans un fichier.
-  - `doubleboucle`  : Génère une double boucle java

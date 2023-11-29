@@ -6,10 +6,11 @@
 		[
 			"/**",
 			" * Lit un fichier à partir des ressources du projet et traite chaque ligne en utilisant une méthode de traitement personnalisée.",
+			" * BufferedReader est plus adapté aux fichiers texte volumineux.",
 			" * ",
 			" * @param nomFichier Le nom du fichier à lire depuis les ressources du projet.",
 			" */",
-			"private void lireFichier(String nomFichier)",
+			"private void lireFichierBufferedReader(String nomFichier)",
 			"{",
 			"    String ligne = null;",
 			"",
@@ -53,10 +54,11 @@
 		[
 			"/**",
 			" * Lit un fichier en utilisant un Scanner et traite chaque ligne en utilisant une méthode de traitement personnalisée.",
+			" * Scanner est plus adapté aux fichiers texte simples et aux opérations de découpage.",
 			" * ",
 			" * @param nomFichier Le nom du fichier à lire.",
 			" */",
-			"private void lireFichierAvecScanner(String nomFichier)",
+			"private void lireFichier(String nomFichier)",
 			"{",
 			"    try",
 			"    {",
@@ -64,8 +66,8 @@
 			"        Scanner scanner =new Scanner(ips, \"UTF-8\");",
 			"        while (scanner.hasNextLine())",
 			"        {",
-			"            \/*CODE DU TRAITEMENT DE LA LIGNE*/",
-			"            System.out.println(\"scanner.nextLine() : \" + scanner.nextLine());",
+			"            /*CODE DU TRAITEMENT DE LA LIGNE*/",
+			"            /*Avec un scanner, vous pouvez utiliser la méthode nextInt() pour lire un entier, nextDouble() pour lire un double, etc.*/",
 			"        }",
 			"        scanner.close();",
 			"    }",
@@ -78,20 +80,37 @@
 		"description": "Génère une Méthode pour lire un fichier avec un Scanner et traiter les lignes"
 	},
 
-	"Génère une double boucle":
+	"Génère une class interne pour créer un iterator si il y en a déjà un par défault":
 	{
-		"prefix": "doubleboucle",
+		"prefix": "iterintern",
 		"body":
 		[
-			"for (int lig = 0; lig < /*Nombre Ligne*/; lig++)",
+			"public class /*NomIterator*/ implements Iterator</*TYPE*/>",
 			"{",
-			"    for (int col = 0; col < /*Nombre Colonne*/; col++)",
+			"    private int index;",
+			"    /*variable si besoin*/",
+			"",
+			"    public /*NomIterator*/()",
 			"    {",
-			"        /*Mettre votre code*/",
+			"        super();",
+			"        this.index = 0;",
+			"        /*initialisation des variable si besoin*/",
+			"    }",
+			"",
+			"    @Override",
+			"    public boolean hasNext()",
+			"    {",
+			"        return index < NbTotal; /*Si le nombre est dans la classe parent ont fait NomDeLaClassParent.this.VariableDuNbTotal*/",
+			"    }",
+			"",
+			"    @Override",
+			"    public /*TYPE*/ next()",
+			"    {",
+			"        return ArrayQuiContientLesValeur[this.index++];/*Si le tableau est dans la classe parent ont fait NomDeLaClassParent.this.ArrayQuiContientLesValeur*/",
 			"    }",
 			"}"
 		],
-		"description": "Génère une double boucle java"
+		"description": "Génère une class interne pour créer un iterator si il y en a déjà un par défault"
 	},
 
 	"Génère une méthode pour écrire dans un fichier":
