@@ -2,11 +2,15 @@
 
 Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
 
-## [1.0.6 - 1.0.7] - 20/11/2023
+## [1.0.8]
+- Optimisation et amélioration des snippets.
+- ajout du snippet `enum`
+
+## [1.0.6 - 1.0.7] - 29/11/2023
 - Mise a jour de la JavaDoc pour les deux méthode `lireFichier` et de l'importation des importe automatique
 - Ajout des snippets:
- - `iterintern`
- - `comparintern`
+  - `iterintern`
+  - `comparintern`
 
 ## [1.0.4 - 1.0.5] - 04/11/2023
 

@@ -10,7 +10,7 @@
 			" * ",
 			" * @param nomFichier Le nom du fichier à lire depuis les ressources du projet.",
 			" */",
-			"private void lireFichierBufferedReader(String nomFichier)",
+			"private void lireFichier(String nomFichier)",
 			"{",
 			"    String ligne = null;",
 			"",
@@ -22,6 +22,7 @@
 			"        // Traitement du fichier",
 			"        while ((ligne = fichier.readLine()) != null)",
 			"        {",
+			"            /*Mettre une condition si besoin*/",
 			"            traiteLigne(ligne);// Modifiez cette méthode pour traiter la ligne lue",
 			"        }",
 			"        // Fin du traitement du fichier",
@@ -35,13 +36,13 @@
 			"",
 			"/**",
 			" * Méthode destinée à traiter chaque ligne lue à partir du fichier.",
-			" * Vous devriez implémenter votre code de traitement personnalisé ici.",
 			" * ",
 			" * @param ligne La ligne lue à partir du fichier.",
 			" */",
 			"private void traiteLigne(String ligne)",
 			"{",
-			"    /*Mettre votre code de traitement de ligne*/",
+			"    ${1:Scanner scanner = new Scanner(ligne);",
+			"    /*Mettre votre code de traitement de ligne*/}",
 			"}"
 		],
 		"description": "Génère une Méthode pour lire un fichier et traiter les lignes"
@@ -56,6 +57,9 @@
 			" * Lit un fichier en utilisant un Scanner et traite chaque ligne en utilisant une méthode de traitement personnalisée.",
 			" * Scanner est plus adapté aux fichiers texte simples et aux opérations de découpage.",
 			" * ",
+			" * Si vous devez faire ligne par ligne, utiliser lirefichierBufferedReader et dans la méthode traite ligne",
+			" * vous aller créée un scanner pour traiter la ligne comme suit Scanner scanner = new Scanner(ligne).",
+			" * ",
 			" * @param nomFichier Le nom du fichier à lire.",
 			" */",
 			"private void lireFichier(String nomFichier)",
@@ -66,8 +70,7 @@
 			"        Scanner scanner =new Scanner(ips, \"UTF-8\");",
 			"        while (scanner.hasNextLine())",
 			"        {",
-			"            /*CODE DU TRAITEMENT DE LA LIGNE*/",
-			"            /*Avec un scanner, vous pouvez utiliser la méthode nextInt() pour lire un entier, nextDouble() pour lire un double, etc.*/",
+			"            ${1:/*CODE DU TRAITEMENT DE LA LIGNE*/}",
 			"        }",
 			"        scanner.close();",
 			"    }",
@@ -85,12 +88,12 @@
 		"prefix": "iterintern",
 		"body":
 		[
-			"public class NomIterator implements Iterator<TYPE>",
+			"public class ${2:NomIterator} implements Iterator<${1:TYPE}>",
 			"{",
 			"    private int index = 0;",
 			"    /*variable si besoin*/",
 			"",
-			"    public NomIterator()",
+			"    public ${2}()",
 			"    {",
 			"        /*initialisation des variable si besoin*/",
 			"    }",
@@ -98,13 +101,13 @@
 			"    @Override",
 			"    public boolean hasNext()",
 			"    {",
-			"        return index < NbTotal; /*Si le nombre est dans la classe parent ont fait NomDeLaClassParent.this.VariableDuNbTotal*/",
+			"        return index < ${3:NbTotal}; /*Si le nombre est dans la classe parent ont fait NomDeLaClassParent.this.VariableDuNbTotal*/",
 			"    }",
 			"",
 			"    @Override",
-			"    public TYPE next()",
+			"    public ${1} next()",
 			"    {",
-			"        return ArrayQuiContientLesValeur[this.index++];/*Si le tableau est dans la classe parent ont fait NomDeLaClassParent.this.ArrayQuiContientLesValeur*/",
+			"        return ${4:ArrayQuiContientLesValeur}[this.index++];/*Si le tableau est dans la classe parent ont fait NomDeLaClassParent.this.ArrayQuiContientLesValeur*/",
 			"    }",
 			"}"
 		],
@@ -116,17 +119,33 @@
 		"prefix": "comparintern",
 		"body":
 		[
-			"public static class NomComparator implements Comparator<TYPE>",
+			"public static class ${2:NomComparator} implements Comparator<${1:TYPE}>",
 			"{",
 			"    @Override",
-			"    public int compare(TYPE o1, TYPE o2)",
+			"    public int compare(${1} o1, ${1} o2)",
 			"    {",
-			"        /*CODE DE COMPARAISON*/",
+			"        ${3:/*CODE DE COMPARAISON*/}",
 			"    }",
 			"}"
 		],
 		"description": "Génère une class interne pour créer un comparator si il y en a déjà un par défault"
 	
+	},
+
+	"Initialise la class actuel en enum":
+	{
+		"prefix": "enum",
+		"body":
+		[
+		"/**",
+		" * ${TM_FILENAME_BASE} est une classe enum  ",
+		" */",
+		"public enum ${TM_FILENAME_BASE}",
+		"{",
+		"    ${1:// Votre code ici}",
+		"}"
+		],
+	"description": "Initialise la class actuel en enum"
 	},
 
 	"Génère une méthode pour écrire dans un fichier":
@@ -164,9 +183,9 @@
 			" */",
 			"private String ecritureLigne()",
 			"{",
-			"    /* Mettez votre code de génération de ligne ici */",
+			"    ${1:/* Mettez votre code de génération de ligne ici */",
 			"    String str = \"\";",
-			"    return str;",
+			"    return str;}",
 			"}"
 		],
 		"description": "Génère une Méthode pour écrire dans un fichier"

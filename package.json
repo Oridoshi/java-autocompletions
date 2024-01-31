@@ -3,7 +3,7 @@
   "publisher": "TomDunet",
   "displayName": "JAVA Autocomplétions",
   "description": "Extention java pour avoir des autocomplétions et des snippets",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "icon": "data/img/icon.png",
   "engines": {
     "vscode": "^1.83.0"
