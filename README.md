@@ -1,12 +1,12 @@
 # Java Autocomplétions
 
-![Version](https://img.shields.io/badge/Version-1.0.8-brightgreen)
+![Version](https://img.shields.io/badge/Version-1.0.9-brightgreen)
 ![License](https://img.shields.io/badge/License-Open%20Source-orange)
-![Indentation](https://img.shields.io/badge/Indentation-Allman-lightgray)
+![Indentation](https://img.shields.io/badge/Indentation-Allman/K&R-lightgray)
 
 ## Description
 
-L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outil pratique pour les développeurs Java. Elle propose une collection de snippets personnalisés pour simplifier la rédaction de code Java, en suivant le style d'indentation Allman. Cette extension facilite la création de méthodes courantes et de modèles de code, améliorant ainsi votre productivité en développement Java.
+L'extension "Java Autocomplétions" pour Visual Studio Code (VSCode) est un outil pratique pour les développeurs Java. Elle propose une collection de snippets personnalisés pour simplifier la rédaction de code Java, en suivant le style d'indentation Allman ou K&R. Cette extension facilite la création de méthodes courantes et de modèles de code, améliorant ainsi votre productivité en développement Java.
 
 ## Fonctionnalités
 
@@ -30,6 +30,10 @@ L'extension "JAVA Autocomplétions" ajoute des snippets personnalisés pour Java
 - `lirefichier` : Génère une méthode pour lire un fichier et traiter les lignes.
 
 ![GIF D'UTILISATION JAVA AUTOCOMPLÉTION](./data/img/utilisation1.gif)
+
+### Commande
+
+Il existe des commandes dans Java Autocomplétions. Toutes ces commandes auront le préfixe `Java-Autocompletions` et s'utilisent dans la barre de recherche de cette manière : `> Java-Autocompletions COMMANDE`.
 
 ## Contributions
 

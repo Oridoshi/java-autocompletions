@@ -3,7 +3,9 @@
   "publisher": "TomDunet",
   "displayName": "JAVA Autocomplétions",
   "description": "Extention java pour avoir des autocomplétions et des snippets",
-  "version": "1.0.8",
+  "author": "Dunet Tom",
+  "license": "MIT",
+  "version": "1.0.9",
   "icon": "data/img/icon.png",
   "engines": {
     "vscode": "^1.83.0"
@@ -29,8 +31,24 @@
   "activationEvents": [
     "onLanguage:java"
   ],
-  "main": "./dist/extension.js",
+  "main": "./client/out/extension",
+  "java": {
+    "format": {
+        "enable": true,
+        "provider": "your-extension-id"
+    }
+  },
   "contributes": {
+    "commands": [
+      {
+        "command": "java-autocompletions.changeIndentation",
+        "title": "Java-Autocompletions Changer Indentation"
+      }
+    ],
+    "documentFormattingProvider": [{
+        "language": "java",
+        "scheme": "file"
+    }],
     "languages": [
       {
         "id": "java",
@@ -48,35 +66,54 @@
         "language": "java",
         "path": "./snippets/java.json"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Multi LSP configuration",
+      "properties": {
+        "lspMultiServerSample.enable": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Controls the enablement."
+        },
+        "lspMultiServerSample.options": {
+          "scope": "resource",
+          "type": "object",
+          "default": {},
+          "description": "Additional options."
+        },
+        "lspMultiServerSample.trace.server": {
+          "scope": "window",
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VSCode and the language server."
+        }
+      }
+    }
   },
   "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+    "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.1",
-    "@types/node": "16.x",
-    "@types/vscode": "^1.83.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "@vscode/test-electron": "^2.3.4",
-    "eslint": "^8.47.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "ts-loader": "^9.4.4",
-    "typescript": "^5.2.2",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^16.18.79",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.3.2"
   },
   "dependencies": {
-    "java-parser": "^2.0.5"
+    "@vscode/test-electron": "^2.3.9",
+    "glob": "^10.3.10"
   }
 }

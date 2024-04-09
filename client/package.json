@@ -1,0 +1,23 @@
+{
+	"name": "java-autocompletions-client-part",
+	"description": "",
+	"author": "Dunet Tom",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Oridoshi/java-autocompletions"
+	},
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"scripts": {},
+	"dependencies": {
+		"vscode-languageclient": "^7.0.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0"
+	},
+	"java-autocompletions-server.trace.server": "verbose"
+}

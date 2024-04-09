@@ -4,4 +4,4 @@ node_modules
 .vscode-test/
 *.vsix
 test_extention
-snippets/INFO_CREATION_SNIPPETS.md
+server/src/INFO_CREATION_SNIPPETS.md

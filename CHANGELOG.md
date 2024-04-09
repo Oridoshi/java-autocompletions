@@ -1,10 +1,19 @@
-# Journal des modifications (CHANGELOG)
+# Journal des modifications
 
-Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier.
+Toutes les modifications importantes de l'extension "Java Autocomplétions" seront répertoriées dans ce fichier. Pour tout problème rencontré, veuillez soumettre une demande via [GitHub](https://github.com/Oridoshi/java-autocompletions/issues).
 
-## [1.0.8]
+## [1.0.9] - 09/04/2024
+Beaucoup de changements et de mises à jour ont été effectués :
+- Mise en place d'un serveur LSP.
+- La commande `> Java-Autocompletions Changer Indentation` a été ajoutée. Elle permet de changer l'indentation de Allman à K&R.
+- Tous les snippets sont devenus dynamiques et s'adaptent à l'indentation choisie. De plus, de nouveaux snippets ont été ajoutés :
+  - `lirefichierStatic` : Comme son nom l'indique, il s'agit d'une fonction pour lire un fichier qui n'utilise pas les ressources du projet mais celles du système.
+  - `verifierIndentation` : Ce snippet permet de visualiser son indentation via sa description. L'utiliser ne mettra qu'un espace. Il est principalement présent pour vérifier son indentation rapidement.
+- Mise en place d'un "Format Document" propre à l'extension. En fonction de l'indentation choisie, il formatera votre code en Allman ou en K&R. Il s'agit d'un formatage de document basique. Pour des améliorations supplémentaires, veuillez soumettre une demande via GitHub.
+
+## [1.0.8] - 31/01/2024
 - Optimisation et amélioration des snippets.
-- ajout du snippet `enum`
+- Ajout du snippet `enum`
 
 ## [1.0.6 - 1.0.7] - 29/11/2023
 - Mise a jour de la JavaDoc pour les deux méthode `lireFichier` et de l'importation des importe automatique
